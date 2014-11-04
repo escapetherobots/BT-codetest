@@ -71,6 +71,13 @@ function zFunctionLong() {
  		return b.length - a.length; 
 	});
 
+	for (var i = 0; i<longList.length; i++) {
+		if (longList[i].match("at")) {
+			replaced = longList[i].replace("at", "@");
+			zLong.push(replaced);
+			zLongFinal = zLong.slice(0,10);
+		};
+	};
 
 };
 </script>
