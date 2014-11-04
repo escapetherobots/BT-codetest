@@ -88,8 +88,34 @@ function zFunctionLong() {
 		divNames1.appendChild(liNode);
 	};
 	return;
-
 };
+
+//this runs the smallest words
+function zFunctionShort() {
+	shortList = aList.sort(function(a,b){
+		return a.length- b.length;
+	});
+	
+	console.log(shortList);
+	for (var i = 0; i<shortList.length; i++) {
+		if (shortList[i].match("at")) {
+			replaced = shortList[i].replace("at", "@");
+			zShort.push(replaced);
+			zShortFinal  = zShort.slice(0,10);
+		};
+	};
+	
+	//console.log(zShortFinal);
+	//this displays the final output in the DOM
+	for (var e = 0; e<zShortFinal.length;e++) {
+		var liNode = document.createElement("li");
+		var contentNode = document.createTextNode(zShortFinal[e]+" : "+ shortList[e]);
+		liNode.appendChild(contentNode);
+		divNames2.appendChild(liNode);
+	};
+	return;
+};	
+
 </script>
 
 </body>
