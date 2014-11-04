@@ -28,6 +28,23 @@ function read(textFile){
     xhr.onload=show;
     xhr.send()
 }
+
+//show function for ajax
+function show(){
+    zContent=this.response;
+
+    result = zContent.split("\r\n");
+   	
+   	for (var u = 0; u<result.length;u++) {
+   		if(result[u].charAt(0) == "a" && result[u].charAt(1) == "t" ){
+   			aList.push(result[u]);
+   			
+   		};
+
+   	};
+
+
+};   
 </script>
 
 </body>
