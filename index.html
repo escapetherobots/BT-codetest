@@ -79,6 +79,16 @@ function zFunctionLong() {
 		};
 	};
 
+	//console.log(zLongFinal);
+	//this displays the final output in the DOM
+	for (var e = 0; e<zLongFinal.length;e++) {
+		var liNode = document.createElement("li");
+		var contentNode = document.createTextNode(zLongFinal[e]+" : "+ longList[e]);
+		liNode.appendChild(contentNode);
+		divNames1.appendChild(liNode);
+	};
+	return;
+
 };
 </script>
 
