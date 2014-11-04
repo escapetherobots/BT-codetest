@@ -20,6 +20,15 @@
 </ul>
 </section>
 
+<script>
+//ajax call
+function read(textFile){
+    var xhr=new XMLHttpRequest;
+    xhr.open('GET',textFile);
+    xhr.onload=show;
+    xhr.send()
+}
+</script>
 
 </body>
 </html>
