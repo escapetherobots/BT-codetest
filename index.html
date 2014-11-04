@@ -21,6 +21,23 @@
 </section>
 
 <script>
+var divNames1 = document.getElementById('names1');
+var divNames2 = document.getElementById('names2');
+var newLi = document.createElement('li');
+var zArray1= [];
+var zArray2= [];
+var zArrayFinal= [];
+var aList= [];
+var longList= [];
+var shortList= [];
+var zLongFinal= [];
+var zShort= [];
+var zLong = [];
+var zShortFinal = [];
+var data;
+var test;
+var result;
+
 //ajax call
 function read(textFile){
     var xhr=new XMLHttpRequest;
